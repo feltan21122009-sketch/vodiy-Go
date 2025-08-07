@@ -1,7 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
+require('dotenv').config()
 
 // Замените на ваш токен от BotFather
-const token = '8319994093:AAFHIK-AqkXRqiHuFUg_dzJaKm84HUlptvQ';
+const botToken = process.env.BOT_TOKEN
+const token = botToken;
 const bot = new TelegramBot(token, { polling: true });
 
 // 👉 Здесь указываем file_id заранее (выглядит как AgADBA... длинная строка)
